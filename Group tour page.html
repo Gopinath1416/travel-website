@@ -1,0 +1,664 @@
+<html>
+  <head>
+     <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <title>Group Tours</title>
+  <style>
+    body{
+     background-color:white;
+	 font-family:georgia,serif;
+	}
+    .img-GTHolidays{
+	  height:auto;
+	  width:200px;
+	}
+	.Gt-text:hover{
+	  background:#FFCC00;
+	  color:black;
+	}
+	.product-card{
+	  border-radius:10px;	  
+	  padding:15px;
+	  box-shadow: 0 2px 8px;
+	  transition:0.5s;
+	  background:white;
+	  margin-bottom:20px;
+	}
+	.product-card:hover{
+	  transform:scale(1.05);
+	}
+	.img-card{
+	  border-radius:10px;
+	  width:100%;
+      height:auto;
+      object-fit:cover;
+	}
+	.color{
+	  color:red;
+	}
+    .color:hover{
+	  color:green
+	}
+    .dropdown-menu li a{
+		color:black !important;
+		text-decoration:none !important;
+	}
+
+	.dropdown-menu li a:hover{
+		color:black !important;
+		text-decoration:none !important;
+		background:#FFCC00;
+    }
+    .contact-section{
+		position:relative;
+		padding:60px 0;
+		background:url("Images/worldmap.webp") center center no-repeat;
+		background-size:cover;
+	}
+
+	.contact-section::before{
+		content:"";
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background:white;
+		opacity:0.75;
+	}
+
+	.contact-section .container{
+		position:relative;
+		z-index:2;
+	}
+
+	.contact-info{
+		padding-top:180px;
+	}
+
+	.icon{
+		font-size:35px;
+		color:#0f2f5f;
+		background:white;
+		border-radius:50%;
+		padding:12px;
+	}
+
+	.form-control{
+		height:45px;
+	}
+	@media(max-width:768px){
+
+    .contact-info{
+        padding-top:20px;
+        margin-bottom:40px;
+    }
+
+    .contact-section h1{
+        text-align:center;
+        font-size:30px;
+    }
+
+    .form-control{
+        width:100%;
+    }
+    }
+	.btn-warning{
+		background:#ffcc00;
+		border:none;
+		color:black;
+		font-weight:bold;
+	}
+    .dropdown-menu li a{
+		color:black !important;
+		text-decoration:none !important;
+	}
+
+	.dropdown-menu li a:hover{
+		color:black !important;
+		text-decoration:none !important;
+		background:#FFCC00;
+	}
+	.footer-section{
+		background:#111;
+		color:white;
+		padding:60px 0;
+	}
+
+	.footer-section h2{
+		color:#f5e6d0;
+		margin-bottom:20px;
+	}
+
+	.footer-line{
+		width:120px;
+		margin-left:0;
+		border:2px solid white;
+	}
+
+	.footer-section p{
+		font-size:18px;
+		line-height:1.8;
+	}
+
+	.social-icon{
+		font-size:30px;
+		color:white;
+		margin-right:15px;
+	}
+
+	.social-icon:hover{
+		color:#ffcc00;
+	}
+
+	.copyright{
+		background:white;
+		text-align:center;
+		padding:20px;
+		font-size:18px;
+	}
+	.study-note{
+		text-align:center;
+		color:#cccccc;
+		font-size:14px;
+		margin-top:20px;
+    }
+	@media(max-width:768px){
+
+    .footer-section{
+        text-align:center;
+    }
+
+    .footer-line{
+        margin:auto;
+    }
+
+    .footer-section h2{
+        font-size:28px;
+    }
+
+    .social-icon{
+        margin:10px;
+    }
+    }	
+	
+  </style>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class ="container-fluid">
+        <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		  </button>
+		  <img class="img-GTHolidays" class="navbar-brand" src="Images\GT-Holidays-Logo.jpg">
+	    </div>
+		<div class="collapse navbar-collapse" id="mynavbar">
+		  <ul class="nav navbar-nav">
+		    <li class="Gt-text"><a href="index.html">HOME</a></li>
+			<li class="Gt-text" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">COMPANY<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+			    <li><a href="#">About Us</a></li>
+			    <li><a href="#">History</a></li>
+			    <li><a href="#">Media</a></li>
+			    <li><a href="#">Carrer</a></li>
+              </ul>
+            </li>
+            <li class="active"><a href="#">GROUP TOURS</a></li>
+		    <li class="Gt-text" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">PACKAGES<span class ="caret"></span></a>
+		      <ul class="dropdown-menu" style="width:900px;padding:20px;">
+		        <div class="row">
+				  <div class="col-md-3">
+				    <ul>
+					  <h5>Africa</h5><hr/>
+					  <li><a href="#">Kenya</a></li>
+					  <li><a href="#">Morocco</a></li>
+					  <li><a href="#">Seychelles</a></li>
+					  <li><a href="#">Zimbabwe</a></li>
+					  <li><a href="#">Tanzania</a></li>
+					</ul>
+				  </div>
+				  <div class="col-md-3">
+				    <ul>
+					  <h5>America</h5><hr/>
+					  <li><a href="#">Alaska</a></li>
+					  <li><a href="#">Canada</a></li>
+					  <li><a href="#">Central America</a></li>
+					  <li><a href="#">North America</a></li>
+					  <li><a href="#">South America</a></li>
+					  <li><a href="#">USA</a></li>
+					</ul>
+				  </div>
+				  <div class="col-md-3">
+				    <ul>
+					  <h5>Asia</h5><hr/>
+					  <li><a href="#">Bali</a></li>
+					  <li><a href="#">Cambodia</a></li>
+					  <li><a href="#">China</a></li>
+					  <li><a href="#">Hong Kong</a></li>
+					  <li><a href="#">Japan</a></li>
+					  <li><a href="#">Indonesia</a></li>
+					</ul>
+				  </div>
+				  <div class="col-md-3">
+				    <ul>
+					  <h5>Europe</h5><hr/>
+					  <li><a href="#">Armenia</a></li>
+					  <li><a href="#">Austria</a></li>
+					  <li><a href="#">Belgium</a></li>
+					  <li><a href="#">Bulgaria</a></li>
+					  <li><a href="#">Croatia</a></li>
+					  <li><a href="#">France</a></li>
+					</ul>
+				  </div>
+				</div>
+		      </ul>
+		    </li>
+		    <li style="font-size:15px" class="Gt-text" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">INDIA<span class ="caret"></span></a>
+		      <ul class="dropdown-menu" style="width:900px;padding:20px;">
+		        <div class="row">
+				  <div class="col-md-3">
+				    <ul>
+					  <h5>North India</h5><hr/>
+					  <li><a href="#">Agra</a></li>
+					  <li><a href="#">Delhi</a></li>
+					  <li><a href="#">Ladakh</a></li>
+					  <li><a href="#">Punjab</a></li>
+					  <li><a href="#">Lucknow</a></li>
+					  <li><a href="#">Jammu & Kashmir</a></li>
+					</ul>
+				  </div>
+				  <div class="col-md-3">
+				    <ul>
+					  <h5>South India</h5><hr/>
+					  <li><a href="#">Chennai</a></li>
+					  <li><a href="#">Banglore</a></li>
+					  <li><a href="#">Madurai</a></li>
+					  <li><a href="#">Munnar</a></li>
+					  <li><a href="#">Ooty</a></li>
+					  <li><a href="#">Tirupati</a></li>
+					</ul>
+				  </div>
+				  <div class="col-md-3">
+				    <ul>
+					  <h5>East India</h5><hr/>
+					  <li><a href="#">Bihar</a></li>
+					  <li><a href="#">Jharkhand</a></li>
+					  <li><a href="#">Kolkata</a></li>
+					  <li><a href="#">Odisha</a></li>
+					  <li><a href="#">West Bengal</a></li>
+					  <li><a href="#">Darjeeling</a></li>
+					</ul>
+				  </div>
+				  <div class="col-md-3">
+				    <ul>
+					  <h5>West India</h5><hr/>
+					  <li><a href="#">Goa</a></li>
+					  <li><a href="#">Gujarat</a></li>
+					  <li><a href="#">Mumbai</a></li>
+					  <li><a href="#">Rajasthan</a></li>
+					  <li><a href="#">Maharashtra</a></li>
+					  <li><a href="#">Pune</a></li>
+					</ul>
+				  </div>
+				</div>
+		      </ul>
+		    </li>
+			<li style="font-size:15px" class="Gt-text" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">HONEYMOON<span class ="caret"></span></a>
+		      <ul class="dropdown-menu" style="width:500px;padding:20px;">
+		        <div class="row">
+				  <div class="col-md-6">
+				    <ul>
+					  <h5>India</h5><hr/>
+					  <li><a href="#">Goa</a></li>
+					  <li><a href="#">Kerala</a></li>
+					  <li><a href="#">Shimla</a></li>
+					  <li><a href="#">Darjeeling</a></li>
+					  <li><a href="#">Manali</a></li>
+					  <li><a href="#">Andaman</a></li>
+					  <li><a href="#">Himachal</a></li>
+					  <li><a href="#">Munnar</a></li>
+					  <li><a href="#">Kodaikanal</a></li>
+					  <li><a href="#">Coorg</a></li>
+					  <li><a href="#">Ooty</a></li>
+					  <li><a href="#">Kashmir</a></li>
+					</ul>
+				  </div>
+				  <div class="col-md-6">
+				    <ul>
+					  <h5>International</h5><hr/>
+					  <li><a href="#">Maldives</a></li>
+					  <li><a href="#">Bali</a></li>
+					  <li><a href="#">Maurites</a></li>
+					  <li><a href="#">Phuket</a></li>
+					  <li><a href="#">Switzerland</a></li>
+					  <li><a href="#">Seychelles</a></li>
+					  <li><a href="#">Langkawi</a></li>
+					  <li><a href="#">Paris</a></li>
+					  <li><a href="#">Italy</a></li>
+					  <li><a href="#">Krabi</a></li>
+					  <li><a href="#">Greece</a></li>
+					  <li><a href="#">Thailand</a></li>
+					  <li><a href="#">Dubai</a></li>
+					  <li><a href="#">Srilanka</a></li>
+					  <li><a href="#">Singapore</a></li>
+					  <li><a href="#">Malaysia</a></li>
+					  <li><a href="#">Croatia</a></li>
+					  <li><a href="#">South Africa</a></li>
+					  <li><a href="#">Koh Samui</a></li>
+					  <li><a href="#">Australia</a></li>
+					  <li><a href="#">Spain</a></li>
+					  <li><a href="#">Europe</a></li>
+					</ul>
+				  </div>
+				</div>
+		      </ul>
+		    </li>
+		    <li style="font-size:15px" class="Gt-text" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">WEDDING<span class ="caret"></span></a>
+		      <ul class="dropdown-menu" style="width:500px;padding:20px;">
+		        <div class="row">
+				  <div class="col-md-6">
+				    <ul>
+					  <h5>India</h5><hr/>
+					  <li><a href="#">Agra</a></li>
+					  <li><a href="#">Andaman</a></li>
+					  <li><a href="#">Goa</a></li>
+					  <li><a href="#">Jaipur</a></li>
+					  <li><a href="#">Jaisalmer</a></li>
+					  <li><a href="#">Kerala</a></li>
+					  <li><a href="#">Udaipur</a></li>
+					  <li><a href="#">Jodhpur</a></li>
+					</ul>
+				  </div>
+				  <div class="col-md-6">
+				    <ul>
+					  <h5>International</h5><hr/>
+					  <li><a href="#">Bali</a></li>
+					  <li><a href="#">Dubai</a></li>
+					  <li><a href="#">Malaysia</a></li>
+					  <li><a href="#">Paris</a></li>
+					  <li><a href="#">Srilanka</a></li>
+					  <li><a href="#">Thailand</a></li>
+					</ul>
+				  </div>
+				</div>
+		      </ul>
+		    </li>
+		    <li style="font-size:15px" class="Gt-text" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">CONTACTS<span class ="caret"></span></a>
+		      <ul class="dropdown-menu" style="width:500px;padding:20px;">
+		        <div class="row">
+				  <div class="col-md-6">
+				    <ul>
+					  <h5>Our Locations</h5><hr/>
+					  <li><a href="#">Mumbai</a></li>
+					  <li><a href="#">Hyderabad</a></li>
+					  <li><a href="#">Banglore</a></li>
+					  <li><a href="#">Chennai</a></li>
+					  <li><a href="#">Coimbatore</a></li>
+					  <li><a href="#">Erode</a></li>
+					  <li><a href="#">Madurai</a></li>
+					</ul>
+				  </div><br><br><br>
+				  <div class="col-md-6">
+				    <ul>
+					  <li><a href="#">Trichy</a></li>
+					  <li><a href="#">Salem</a></li>
+					  <li><a href="#">Nagercoil</a></li>
+					  <li><a href="#">Kochi</a></li>
+					  <li><a href="#">Pondicherry</a></li>
+					  <li><a href="#">Velore</a></li>
+					</ul>
+				  </div>
+				</div>
+		      </ul>
+		    </li>	
+		  </ul>
+		  <ul class="nav navbar-nav Navbar-right">
+		    <li class="Gt-text"><a href="#"><span class="glyphicon glyphicon-user"></span>Signup</a></li>
+			<li class="Gt-text"><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+		  </ul>
+		</div>
+     </div>
+	</nav>
+	<div class="container-fluid">
+	   <form class="form-horizontal">
+	     <div class="form-group">
+		   <img src="Images\enjoy-stress-free-group-tours-with-gt.jpg" alt="Uwata Ocean Waves" style="width:100%">
+		 </div>
+        <h1 style="color:black">Ultimate Group Tour Adventures</h1>	
+        <h3 style="color:black">Summer Groups for 2026</h3>	<br><br>
+	   <div class="row">
+	    <div class=" col-md-3 col-lg-3 col-sm-12 col-xs-12">
+		  <div class="product-card">
+		    <img class="img-card img-responsive" src="Images\Singapore-and-Malaysia-Group-Tour-600x600.jpg" class="img-responsive"><br>
+		    <p><span class="glyphicon glyphicon-map-marker"></span>Singapore|Malaysia|Kuala Lumphur<p>
+			<h4>Malaysia and Singapore Group Departure ex Chennai</h4>
+			<p class="color"><span class="glyphicon glyphicon-time"></span>6 Nights 7 Days</p>
+		  </div>
+	    </div>
+		<div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+		  <div class="product-card img-responsive">
+		    <img class="img-card" src="Images\sri-lanka-group-departure-ex-chennai.jpg" class="img-responsive"><br><br>
+		    <p><span class="glyphicon glyphicon-map-marker"></span>Kandy|Nuwara Eliya|Bentota|Colombo<p>
+			<h4>Best of Sri Lanka Group Departure ex Chennai</h4>
+			<p class="color"><span class="glyphicon glyphicon-time"></span>4 Nights 5 Days</p>
+		  </div>
+	    </div>
+		<div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+		  <div class="product-card">
+		    <img class="img-card img-responsive" src="Images\vietnam-group-tour-ex-chennai.jpg" class="img-responsive"><br>
+		    <p><span class="glyphicon glyphicon-map-marker"></span>Siem Reap|Angkor Thom|Hanoi|Da Nang<p>
+			<h4>Vietnam and Cambodia Group Departure ex Chennai</h4>
+			<p class="color"><span class="glyphicon glyphicon-time"></span>7 Nights 8 Days</p>
+		  </div>
+	    </div>
+		<div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+		  <div class="product-card">
+		    <img class="img-card img-responsive" src="Images\Thailand-Group-Tour-600x600.jpg" class="img-responsive"><br>
+		    <p><span class="glyphicon glyphicon-map-marker"></span>Bangkok|Pattaya<p>
+			<h4>Thailand Group Departure ex Chennai</h4><br>
+			<p class="color"><span class="glyphicon glyphicon-time"></span>3 Nights 4 Days</p>
+		  </div>
+	    </div>	
+	</div><br>
+    <h1 style ="color:black">Exclusive Group Tours</h1><br><br>
+    <div class="row">
+	    <div class=" col-md-3 col-lg-3 col-sm-12 col-xs-12">
+		  <div class="product-card">
+		    <img class="img-card img-responsive" src="Images\Bali-Group-Tour-600x600.jpg" class="img-responsive"><br>
+		    <p><span class="glyphicon glyphicon-map-marker"></span>Bali<p>
+			<h4>Beautiful Bali Group Tour ex Chennai</h4><br>
+			<p class="color"><span class="glyphicon glyphicon-time"></span>4 Nights 5 Days</p>
+		  </div>
+	    </div>
+		<div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+		  <div class="product-card">
+		    <img class="img-card img-responsive" src="Images\United-Kingdom-Group-Tour-600x600.jpg" class="img-responsive"><br>
+		    <p><span class="glyphicon glyphicon-map-marker"></span>London|Cardiff|Liverpool|Glasgow|Bradford<p>
+			<h4>Scenic UK Group Tour ex Chennai</h4><br>
+			<p class="color"><span class="glyphicon glyphicon-time"></span>9 Nights 10 Days</p>
+		  </div>
+	    </div>
+		<div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+		  <div class="product-card">
+		    <img class="img-card img-responsive" src="Images\hong-kong-group-departure-ex-chennai.jpg" class="img-responsive"><br>
+		    <p><span class="glyphicon glyphicon-map-marker"></span>Hong Kong|Macau<p>
+			<h4>Hong Kong Group Departure ex Chennai</h4>
+			<p class="color"><span class="glyphicon glyphicon-time"></span>4 Nights 5 Days</p>
+		  </div>
+	    </div>
+		<div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+		  <div class="product-card">
+		    <img class="img-card img-responsive" src="Images\amsterdam-and-europe-group-departure-ex-chennai.jpg" class="img-responsive"><br>
+		    <p><span class="glyphicon glyphicon-map-marker"></span>Amsterdam|Paris|Zurich|SeefeldAxamz|Padova<p>
+			<h4>Amsterdam and Europe Group Departure ex Chennai</h4>
+			<p class="color"><span class="glyphicon glyphicon-time"></span>8 Nights 9 Days</p>
+		  </div>
+	    </div>	
+	</div>	
+    </div> 
+    <div class="contact-section">
+       <div class="container">
+         <div class="row">
+		
+            <div class="col-md-6 text-center contact-info">
+
+                <h1>Stay Connected</h1>
+
+                <br>
+
+                <span class="glyphicon glyphicon-earphone icon"></span>
+                <h3>+91 1234567890</h3>
+
+                <hr width="200">
+
+                <span class="glyphicon glyphicon-envelope icon"></span>
+                <h3>mail@holidays.in</h3>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <h1>Book Your Dream Vacation Today!</h1><br>
+
+                <form>
+
+                    <input type="text" class="form-control" placeholder="Name *"><br>
+
+                    <input type="text" class="form-control" placeholder="City of Residence *"><br>
+
+                    <input type="email" class="form-control" placeholder="Email *"><br>
+
+                    <input type="text" class="form-control" placeholder="Phone Number *"><br>
+
+                    <input type="text" class="form-control" placeholder="WhatsApp"><br>
+
+                    <input type="text" class="form-control" placeholder="Travel Destination *"><br>
+
+                    <input
+						type="text"
+						class="form-control"
+						placeholder="Date of Travel *"
+						onfocus="(this.type='date')"
+						onblur="if(this.value==''){this.type='text'}"><br>
+
+                    <input type="number" class="form-control" placeholder="No. of People *"><br>
+
+                    <input type="text" class="form-control" placeholder="Vacation Type *"><br>
+
+                    <label>Captcha *</label>
+                    <h4>10 + 7 =</h4>
+
+                    <input type="text" class="form-control"><br>
+
+                    <button class="btn btn-warning btn-lg btn-block">
+                        SUBMIT
+                    </button>
+
+                </form>
+
+            </div>
+
+          </div>
+       </div>
+     </div>
+	 <div class="footer-section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <h2>Corporate Office</h2>
+                <hr class="footer-line">
+
+                <p>
+                    GT Holidays Pvt LTD,<br>
+                    Novel Tech Park,<br>
+                    Opposite to 1 MG Mall,<br>
+                    MG Road, Bangalore – 560042<br>
+                    Karnataka, India.
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <h2>Head Office</h2>
+                <hr class="footer-line">
+
+                <p>
+                    GT Holidays Pvt LTD,<br>
+                    No.1, Gemini Parsn,<br>
+                    Kodambakkam High Road,<br>
+                    Nungambakkam, Chennai – 600006<br>
+                    Tamil Nadu, India.
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <h2>Our Branches</h2>
+                <hr class="footer-line">
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        <p>Mumbai</p>
+                        <p>Hyderabad</p>
+                        <p>Bangalore</p>
+                        <p>Chennai</p>
+                        <p>Coimbatore</p>
+                    </div>
+
+                    <div class="col-xs-6">
+                        <p>Trichy</p>
+                        <p>Salem</p>
+                        <p>Kochi</p>
+                        <p>Vellore</p>
+                        <p>Kanyakumari</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <h4>Call Us</h4>
+                <h2>+91 1234567890</h2>
+            </div>
+
+            <div class="col-md-4">
+                <h4>Email Us</h4>
+                <h2>mail@holidays.in</h2>
+            </div>
+
+            <div class="col-md-4">
+                <h4>Follow Us</h4>
+
+                <a href="#"><i class="fa fa-facebook social-icon"></i></a>
+                <a href="#"><i class="fa fa-instagram social-icon"></i></a>
+                <a href="#"><i class="fa fa-linkedin social-icon"></i></a>
+                <a href="#"><i class="fa fa-youtube-play social-icon"></i></a>
+                <a href="#"><i class="fa fa-google social-icon"></i></a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="copyright">
+		Educational Project Only | Created for Learning & Practice Purposes.<br>
+		GT Holidays trademarks, logos, and content belong to their respective owners.
+	</div>	
+  </body>
+</html> 
+ 
